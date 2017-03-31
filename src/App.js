@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppHeader from './components/AppHeader/AppHeader';
+import HomePage from './pages/HomePage/HomePage';
 import './App.css';
 
 // Needed for onTouchTap
@@ -15,9 +16,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <AppHeader />
-          <p className="App-intro">
-            Welcome
-          </p>
+          <HomePage />
         </div>
       </MuiThemeProvider>
     );
