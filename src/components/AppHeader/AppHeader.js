@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
@@ -33,8 +36,8 @@ class AppHeader extends Component {
             iconElementLeft={<IconButton><NavigationClose /></IconButton>}
             onLeftIconButtonTouchTap={this.handleToggle}
           />
-          <MenuItem onTouchTap={this.handleClose}>Section 01</MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>Section 02</MenuItem>
+          <Link to="/" onTouchTap={this.handleClose}><MenuItem>Home</MenuItem></Link>
+          <Link to="/about" onTouchTap={this.handleClose}><MenuItem>About</MenuItem></Link>
         </Drawer>
       </div>
     );
