@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import logo from './logo.svg';
+import AppHeader from './components/AppHeader/AppHeader';
 import './App.css';
 
 // Needed for onTouchTap
@@ -10,16 +9,14 @@ import './App.css';
 injectTapEventPlugin();
 
 class App extends Component {
+
   render() {
     return ( 
       <MuiThemeProvider>
         <div className="App">
-          <AppBar
-            title="Title"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-          />
+          <AppHeader />
           <p className="App-intro">
-            save to reload.
+            Welcome
           </p>
         </div>
       </MuiThemeProvider>
